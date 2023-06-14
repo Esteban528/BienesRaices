@@ -2,8 +2,8 @@
    //importar la conexion
     require '../includes/config/database.php';
     $db = conectarDB();
+	
     // Escribir el query
-
     $query = "SELECT * FROM propiedades";
     
     //  Consultar la DB

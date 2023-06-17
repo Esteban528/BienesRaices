@@ -1,4 +1,9 @@
 <?php
+	require '../includes/funciones.php';
+	
+	$auth = autenticarUsuario();
+	if (!$auth) header('Location: /bienesraices');
+
    //importar la conexion
     require '../includes/config/database.php';
     $db = conectarDB();
@@ -45,7 +50,6 @@
 	}
 
     // Importar el template
-    require '../includes/funciones.php';
     incluirTemplate('header');
 ?>
     <main class="contenedor seccion">

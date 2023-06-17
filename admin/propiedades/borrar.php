@@ -1,5 +1,8 @@
 <?php
-    require '../../includes/funciones.php';
+	require '../../includes/funciones.php';
+	$auth = autenticarUsuario();
+	if (!$auth) header('Location: /bienesraices');
+
     incluirTemplate('header');
 ?>
     <main class="contenedor seccion">

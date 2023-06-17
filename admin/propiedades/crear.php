@@ -1,4 +1,7 @@
  <?php 
+require '../../includes/funciones.php';
+	$auth = autenticarUsuario();
+	if (!$auth) header('Location: /bienesraices');
 
     require '../../includes/config/database.php';
     $db = conectarDB();
@@ -100,7 +103,6 @@
         }
     }
 
-    require '../../includes/funciones.php';
     incluirTemplate('header');
 ?>
     <main class="contenedor seccion">
